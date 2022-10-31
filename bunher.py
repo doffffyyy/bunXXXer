@@ -79,6 +79,19 @@ with open('more_info.txt', 'r', encoding = 'utf-8') as filehandle:
         more_info = [current_more_info.rstrip() for current_more_info in filehandle.readlines()]
         #print(more_info)
 
+with open('crash.txt', 'r', encoding = 'utf-8') as filehandle:
+        crash = [current_crash.rstrip() for current_crash in filehandle.readlines()]
+        #print(crash)
+        crash_id = random.randint(0, len(crash)-1)
+        crash_pop = random.randint(1, 9) * 5
+        crash_effects = random.randint(9, 19) *5
+        print(Fore.MAGENTA + 'Катастрофа: ' + crash[crash_id])
+        print(' ')
+        print(Fore.MAGENTA + 'Остаток выжившего населения: ' + str(crash_pop))
+        print(Fore.MAGENTA + 'Разрушения на поверхности: ' + str(crash_effects))
+        print(' ')
+        print(Fore.WHITE)
+
 for i in range(coun):
         
         print(Fore.RED + 'Игрок №', i+1)
