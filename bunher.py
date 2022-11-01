@@ -47,6 +47,7 @@ print(Fore.LIGHTCYAN_EX + '______________________________')
 print(Fore.WHITE)
 print(' ')
 
+
 with open('move_card.txt', 'r', encoding = 'utf-8') as filehandle:
         move_cards = [current_move_cards.rstrip() for current_move_cards in filehandle.readlines()]
         #print(move_cards)
@@ -91,6 +92,7 @@ with open('crash.txt', 'r', encoding = 'utf-8') as filehandle:
         print(Fore.MAGENTA + 'Разрушения на поверхности: ' + str(crash_effects))
         print(' ')
         print(Fore.WHITE)
+
 
 for i in range(coun):
         
